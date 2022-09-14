@@ -30,13 +30,13 @@ $('.time-block').each(function () {
   var time = moment().hour();
   if (id < time) {
     // past
-    $('.time-block').css('.past');
+    $(this).addClass('past');
   } else if (id == time) {
     // present
-    $('.time-block').css('.present');
+    $(this).addClass('present');
   } else {
     // future
-    $('.time-block').css('.future');
+    $(this).addClass('future');
   }
 });
 
