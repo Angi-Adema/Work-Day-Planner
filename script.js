@@ -6,8 +6,7 @@ var day = moment().format("dddd, MMMM Do, YYYY, h:mma");
 $('#currentDay').text(day);
 // WHEN I scroll down
 // THEN I am presented with timeblocks for standard business hours
-// WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+
 // WHEN I click into a timeblock
 // THEN I can enter an event
 // WHEN I click the save button for that timeblock
@@ -26,7 +25,8 @@ $('.time-block').each(function () {
   var id = $(this).attr('id');
 
   $('#' + id + ' .description').val(localStorage.getItem(id))
-
+// WHEN I view the timeblocks for that day
+// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
   var time = moment().hour();
   if (id < time) {
     // past
@@ -40,6 +40,6 @@ $('.time-block').each(function () {
   }
 });
 
-// the long way
+// the long way for looping through the timeblocks
 // $('#9 .description').val(localStorage.getItem('9'))
 // $('#10 .description').val(localStorage.getItem('9'))
