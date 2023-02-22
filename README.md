@@ -26,5 +26,6 @@ THEN the saved events persist
 
 ## Technologies
 
+JavaScript
 HTML
 CSS
